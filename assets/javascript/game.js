@@ -23,18 +23,29 @@ $(document).ready(function() {
 
     $randomNumber.text(randomNumber);
 
-    function addSum(e){
-        if(e.srcElement.id === 'blue') userPoints += blue;
-        else if(e.srcElement.id === 'green') userPoints += green;
-        else if(e.srcElement.id === 'red') userPoints += red;
-        else if(e.srcElement.id === 'yellow') userPoints += yellow;
+    /*function addSum(e){
+        if(e.dataset.crystal === 'blue') userPoints += blue;
+        else if(e.dataset.crystal === 'green') userPoints += green;
+        else if(e.dataset.crystal === 'red') userPoints += red;
+        else if(e.dataset.crystal === 'yellow') userPoints += yellow;
         $userScore.text(userPoints);
         checkWin();
-    }
+    }*/
 
     const crystals = document.querySelectorAll('.crystal-images');
 
-    crystals.forEach(crystal => crystal.addEventListener('click', addSum));
+    //crystals.forEach(crystal => crystal.addEventListener('click', addSum));
+
+    $.each(crystals, function(i) {
+        $(this).on('click', function(){
+            if(this.dataset.crystal === 'blue') userPoints += blue;
+            else if(this.dataset.crystal === 'green') userPoints += green;
+            else if(this.dataset.crystal === 'red') userPoints += red;
+            else if(this.dataset.crystal === 'yellow') userPoints += yellow;
+            $userScore.text(userPoints);
+            checkWin();
+        });
+    });
 
     function checkWin(){
         if(randomNumber === userPoints){
