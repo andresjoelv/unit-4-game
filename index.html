@@ -5,10 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
-    
+
+    <div><h1>CrystalCollector!</h1></div>
+    <div>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal</p>
+    </div>
+
+    <div class="container-for-random">
+        <div class="random-number">0</div>
+        <div class="user-score-container">
+            <p>Wins: </p><p id="wins">0</p>
+            <p>Losses: </p><p id="losses">0</p>
+        </div>
+    </div>
+
+    <div class="container-crystals">
+        <img id="blue" data-crystal="blue" class="crystal-images" src="assets/images/blue.png" alt="" />
+        <img id="green" class="crystal-images" src="assets/images/green.png" alt="" />
+        <img id="red" class="crystal-images" src="assets/images/red.png" alt="" />
+        <img id="yellow" class="crystal-images" src="assets/images/yellow.png" alt="" />
+    </div>
+
+    <div><h2>Your total score is: </h2></div>
+    <div class="user-score-container">
+        <p id="user-score">0</p>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
