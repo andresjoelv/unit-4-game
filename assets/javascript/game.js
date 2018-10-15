@@ -36,31 +36,6 @@ $(document).ready(function() {
 
     crystals.forEach(crystal => crystal.addEventListener('click', addSum));
 
-    /*$('#blue').on("click", function(){
-        // display
-        userPoints += blue;
-        $userScore.text(userPoints);
-        checkWin();
-    });
-    $('#green').on("click", function(){
-        // display
-        userPoints += green;
-        $userScore.text(userPoints);
-        checkWin();
-    });
-    $('#red').on("click", function(){
-        // display
-        userPoints += red;
-        $userScore.text(userPoints);
-        checkWin();
-    });
-    $('#yellow').on("click", function(){
-        // display
-        userPoints += yellow;
-        $userScore.text(userPoints);
-        checkWin();
-    });*/
-
     function checkWin(){
         if(randomNumber === userPoints){
             // user wins
