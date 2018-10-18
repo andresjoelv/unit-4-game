@@ -1,4 +1,42 @@
+:root {
+    --crystal: blue;
+}
+
+html {
+    text-align: center;
+}
+.random-number {
+    border: 3px solid red;
+    font-size: 100px;
+    color: #fff;
+    background: orange;
+}
+.container-for-random{ 
+    font-size: 70px;
+}
+
+.container-for-random .user-wl-container {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.container-for-random .user-wl-container .display-name {
+    font-size: 25px;
+}
+.container-for-random .user-wl-container .wl {
+    border: 1px solid red;
+}
+
+.user-score-container {
+    font-size: 30px;
+}
+#user-score {
+    padding: 17px;
+    font-size: 100px;
+    color: #fff;
+    background: var(--crystal);
+}
+
 .crystal-images {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }

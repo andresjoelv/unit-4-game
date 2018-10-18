@@ -37,7 +37,8 @@ $(document).ready(function() {
     //crystals.forEach(crystal => crystal.addEventListener('click', addSum));
 
     $.each(crystals, function(i) {
-        $(this).on('click', function(){
+        $(this).on('click', function() {
+            document.documentElement.style.setProperty("--crystal", this.dataset.crystal);
             if(this.dataset.crystal === 'blue') userPoints += blue;
             else if(this.dataset.crystal === 'green') userPoints += green;
             else if(this.dataset.crystal === 'red') userPoints += red;
